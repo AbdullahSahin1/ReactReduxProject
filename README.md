@@ -1,2 +1,2 @@
 # ReactReduxProject
-I make react project with redux
+I make react project with use redux
