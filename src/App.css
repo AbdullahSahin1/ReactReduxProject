@@ -20,3 +20,39 @@
   text-align: center;
   border-radius: 50%;
 }
+.cart{
+  text-align: center;
+}
+.clearBtn{
+  padding: 10px;
+  border: none;
+  border-radius: 30px;
+  background-color: brown;
+  color: white;
+}
+img{
+  width: 50%;
+}
+.cartItem{
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 150px;
+}
+.cartInfo{
+  text-align: right;
+}
+.cartquantitybtn{
+  border: none;
+  background-color: white;
+}
+.cartquantity{
+  margin: right;
+}
+.cartdeletebtn{
+  padding: 10px;
+  border: none;
+  border-radius: 30px;
+  background-color: brown;
+  color: white;
+  margin-top: 50px
+}
