@@ -1,5 +1,6 @@
 import React from 'react'
 import { useSelector } from "react-redux";
+import CourseItem from './CourseItem';
 
 function CourseList() {
     const {cartItems,quantity,total} = useSelector((store)=> store.cart)
