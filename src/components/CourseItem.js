@@ -12,9 +12,13 @@ function CourseItem({id,title,price,img,quantity}) {
             <h4>{title}</h4>
             <h4>{price}</h4>
             <div>
-                <button className='cartquantitybtn'><FaChevronUp /></button>
-                <p className='cartquantity'>{quantity}</p>
-                <button className='cartquantitybtn'><FaChevronDown/></button>
+               <button className="cartquantitybtn" onClick={()=>{dispatch(increase(id))}}>
+            <FaChevronUp />
+          </button>
+          <p className="cartquantity">{quantity}</p>
+          <button className="cartquantitybtn" onClick={()=>{dispatch(decrase(id))}}>
+            <FaChevronDown />
+          </button>
             </div>
             <button className='cartdeletebtn' onClick={()=>{dispatch(removeItem(id))}}>Sil</button>
         </div>
