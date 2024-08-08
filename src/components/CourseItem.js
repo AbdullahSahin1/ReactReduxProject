@@ -4,6 +4,7 @@ import { FaChevronDown } from "react-icons/fa6";
 import { useDispatch } from "react-redux";
 import { removeItem } from "../control/cardSlice";
 function CourseItem({id,title,price,img,quantity}) {
+    const dispatch = useDispatch();
   return (
     <div className='cartItem' >
         <img src={img} alt=""/>
