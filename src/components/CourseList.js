@@ -22,7 +22,7 @@ function CourseList() {
             <div>
                 {
                     cartItems.map((item)=>{
-                        return <CourseItem {...item}/>
+                        return <CourseItem key={item.id} {...item}/>
                     })
                 }
             </div>
