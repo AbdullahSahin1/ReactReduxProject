@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+
 import CourseItems from "../CourseItems";
 
 const initialState = {
@@ -14,7 +15,12 @@ const cardSlice = createSlice({
     clearCart: (state) => {
       state.cartItems = [];
     },
+    removeItem:(state,action) =>{
+      const itemID = action.payload;
+      state.cartItems = state.cartItems.filter((item)=>item.id !== itemID)
+    },
+    increase
   },
 });
-export const { clearCart } = cardSlice.actions;
+export const { clearCart, removeItem } = cardSlice.actions;
 export default cardSlice.reducer;
