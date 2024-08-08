@@ -1,7 +1,8 @@
 import React from 'react'
 import { FaChevronUp } from "react-icons/fa";
 import { FaChevronDown } from "react-icons/fa6";
-
+import { useDispatch } from "react-redux";
+import { removeItem } from "../control/cardSlice";
 function CourseItem({id,title,price,img,quantity}) {
   return (
     <div className='cartItem' >
@@ -14,7 +15,7 @@ function CourseItem({id,title,price,img,quantity}) {
                 <p className='cartquantity'>{quantity}</p>
                 <button className='cartquantitybtn'><FaChevronDown/></button>
             </div>
-            <button className='cartdeletebtn'>Sil</button>
+            <button className='cartdeletebtn' onClick={()=>{dispatch(removeItem(id))}}>Sil</button>
         </div>
     </div>
     
