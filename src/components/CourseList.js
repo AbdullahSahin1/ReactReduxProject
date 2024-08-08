@@ -33,7 +33,7 @@ function CourseList() {
                 <div>
                     <h4>Toplam Tutar <span>{total} TL</span></h4>
                 </div>
-                <button className='clearBtn'>Temizle</button>
+                <button className='clearBtn'  onClick={()=>dispatch(clearCart())}>Temizle</button>
             </footer>
         </section>
     )}
