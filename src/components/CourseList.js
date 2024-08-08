@@ -6,16 +6,16 @@ function CourseList() {
     const {cartItems,quantity,total} = useSelector((store)=> store.cart)
 
   return (
-     <>
+    <>
            {quantity<1 ? (
-        <section>
+        <section className='cart'>
             <header>
                 <h2>Sepetim</h2>
                 <h4>bomboş</h4>
             </header>
         </section>
     ):(
-        <section>
+        <section className='cart'>
             <header>
                 <h2>Sepetim</h2>
             </header>
@@ -32,11 +32,12 @@ function CourseList() {
                 <div>
                     <h4>Toplam Tutar <span>{total} TL</span></h4>
                 </div>
-                <button>Temizle</button>
+                <button className='clearBtn'>Temizle</button>
             </footer>
         </section>
     )}
     </>
+ 
   )
 }
 
