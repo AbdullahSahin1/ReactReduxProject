@@ -19,7 +19,10 @@ const cardSlice = createSlice({
       const itemID = action.payload;
       state.cartItems = state.cartItems.filter((item)=>item.id !== itemID)
     },
-    increase
+    increase:(state,action) =>{
+      const itemID = action.payload;
+      state.cartItems = state.cartItems.filter((item)=>item.id !== itemID)
+    },
   },
 });
 export const { clearCart, removeItem } = cardSlice.actions;
