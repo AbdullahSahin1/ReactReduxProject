@@ -19,8 +19,13 @@ const cardSlice = createSlice({
       const itemID = action.payload;
       state.cartItems = state.cartItems.filter((item)=>item.id !== itemID)
     },
-    increase:(state,action) =>{
-      
+     increase:(state,action) =>{
+     const cartItem =  state.cartItems.find((item)=>item.id === action.payload)
+     cartItem.quantity +=1
+    },
+    decrase:(state,action) =>{
+      const cartItem =  state.cartItems.find((item)=>item.id === action.payload)
+      cartItem.quantity -=1
     },
   },
 });
